@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Link from "next/link";
+import styles from "../styles/Home.module.css";
 
 export default function ResponsiveAppbar() {
   useEffect(() => {
@@ -10,7 +11,13 @@ export default function ResponsiveAppbar() {
 
   return (
     <div>
-      <nav className="orange" style={{ padding: "0px 10px", position: "fixed" }}>
+      <nav
+        style={{
+          backgroundColor: "#333",
+          padding: "0px 10px",
+          position: "fixed",
+        }}
+      >
         <div className="nav-wrapper">
           <Link href={`/`}>
             <a className="brand-logo">Web Zone</a>
@@ -40,7 +47,9 @@ export default function ResponsiveAppbar() {
         </div>
       </nav>
 
-      <ul className="sidenav" id="mobile-nav">
+      <ul className="sidenav sidenav-close" id="mobile-nav">
+        <h5>Star Painting</h5>
+
         <Link href={`/`}>
           <li>
             <a>Home</a>

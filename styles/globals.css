@@ -8,16 +8,43 @@ body {
   margin-top: 20px;
 }
 
+.card-view:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.11);
+  z-index: 2;
+}
+
+nav {
+  z-index: 2;
+}
+
 a {
   cursor: pointer;
 }
+ul li:hover {
+  background-color: rgb(187, 124, 124);
+}
 
 #mobile-nav {
-  background-color: orange;
+  background-color: #333;
+}
+
+#mobile-nav a {
+  color: #eee;
+}
+#mobile-nav a:hover {
+  background-color: rgb(187, 124, 124);
+}
+
+#mobile-nav h5 {
+  text-align: center;
+  margin: 15px;
+  color: #eee;
 }
 
 .slide {
-  background-color: orange;
+  padding-top: 15px;
+  background-color: #eee;
 }
 footer {
   display: block;

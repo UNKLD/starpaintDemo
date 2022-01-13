@@ -9,11 +9,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta name="theme-color" content="#3c1742" />
-        <meta name="description" content="painting" />
         <meta name="description" content="star painting" />
-        <meta name="keywords" content="painting" />
-        <meta name="keywords" content="ethio" />
+        <meta
+          name="keywords"
+          content="star painting, painting, ethio, ehio-painting"
+        />
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
