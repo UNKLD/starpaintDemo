@@ -1,27 +1,20 @@
 import CardView from "../components/CardView";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-
+import Slider from "../components/Slider";
 export default function Home() {
-  const posts = [
-    { name: "luigi", age: "14" },
-    { name: "mario", age: "15" },
-    { name: "mario", age: "15" },
-    { name: "luigi", age: "14" },
-    { name: "luigi", age: "14" },
-  ];
   return (
     <>
-      <div className="slide">
-        <img src="vercel.svg" alt="" width={300} height={200} />
+      <div className="container-lg " id="main">
+        <div className="container m-5">
+          <h3 className="display-4 text-center">Star Painting</h3>
+          <p className="text-muted h5 text-center">
+            Painting is silent poetry, and poetry is a painting that speaks.
+          </p>
+        </div>
+        <div className="container-xl">
+          <Slider />
+        </div>
+        <CardView />
       </div>
-      <Container className="main">
-        <Grid container style={{ justifyContent: "space-evenly" }}>
-          {posts.map((post, i) => {
-            return <CardView key={i} post={post} />;
-          })}
-        </Grid>
-      </Container>
     </>
   );
 }

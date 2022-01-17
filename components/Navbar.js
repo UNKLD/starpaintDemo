@@ -1,71 +1,67 @@
-import { useEffect } from "react";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import { useState, useEffect } from "react";
 
-export default function ResponsiveAppbar() {
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
-    $(document).ready(function () {
-      $(".sidenav").sidenav();
-    });
+    window.onscroll = function () {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
   }, []);
 
   return (
-    <div>
-      <nav
-        style={{
-          backgroundColor: "#333",
-          padding: "0px 10px",
-          position: "fixed",
-        }}
-      >
-        <div className="nav-wrapper">
-          <Link href={`/`}>
-            <a className="brand-logo">Web Zone</a>
-          </Link>
+    <nav
+      className={
+        scrolled
+          ? "navbar navbar-expand-lg navbar-light bg-light fixed-top pb-3 shadow-lg"
+          : "navbar navbar-expand-lg navbar-light bg-light fixed-top pb-3"
+      }
+    >
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#intro">
+          <span className="text-primary fw-bolder h2">
+            <i class="bi bi-palette-fill m-3 h4"></i>
+            Star Painting
+          </span>
+        </a>
+        <button
+          className="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="toggler-icon top-bar"></span>
+          <span className="toggler-icon middle-bar"></span>
+          <span className="toggler-icon bottom-bar"></span>
+        </button>
+        <div
+          className="collapse navbar-collapse justify-content-end align-center"
+          id="navbarSupportedContent"
+        >
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link text-dark" href="#topics">
+                About Us
+              </a>
+              <div classNameName="under"></div>
+            </li>
 
-          <a className="sidenav-trigger" data-target="mobile-nav">
-            <i className="material-icons">menu</i>
-          </a>
-
-          <ul className="right hide-on-med-and-down ">
-            <Link href={`/`}>
-              <li>
-                <a>Home</a>
-              </li>
-            </Link>
-            <Link href={`/about`}>
-              <li>
-                <a>About</a>
-              </li>
-            </Link>
-            <Link href={`/contact`}>
-              <li>
-                <a>Contact</a>
-              </li>
-            </Link>
+            <li className="nav-item">
+              <a className="nav-link text-dark" href="#contact">
+                Get in Touch
+              </a>
+            </li>
           </ul>
         </div>
-      </nav>
-
-      <ul className="sidenav sidenav-close" id="mobile-nav">
-        <h5>Star Painting</h5>
-
-        <Link href={`/`}>
-          <li>
-            <a>Home</a>
-          </li>
-        </Link>
-        <Link href={`/about`}>
-          <li>
-            <a>About</a>
-          </li>
-        </Link>
-        <Link href={`/contact`}>
-          <li>
-            <a>Contact</a>
-          </li>
-        </Link>
-      </ul>
-    </div>
+      </div>
+    </nav>
   );
 }
