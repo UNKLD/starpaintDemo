@@ -23,12 +23,14 @@ export default function Navbar() {
       }
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#intro">
-          <span className="text-primary fw-bolder h2">
-            <i class="bi bi-palette-fill m-3 h4"></i>
-            Star Painting
-          </span>
-        </a>
+        <Link href={`/`}>
+          <a className="navbar-brand">
+            <span className="text-primary fw-bolder h2">
+              <i class="bi bi-palette-fill m-3 h4"></i>
+              Star Painting
+            </span>
+          </a>
+        </Link>
         <button
           className="navbar-toggler collapsed"
           type="button"
@@ -48,16 +50,16 @@ export default function Navbar() {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link text-dark" href="#topics">
-                About Us
-              </a>
+              <Link href={`/about`}>
+                <a className="nav-link text-dark">About Us</a>
+              </Link>
               <div classNameName="under"></div>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link text-dark" href="#contact">
-                Get in Touch
-              </a>
+              <Link href={`/contact`}>
+                <a className="nav-link text-dark">Get in Touch</a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -5,7 +5,35 @@ body {
 }
 
 #main {
-  margin-top: 90px;
+  margin-top: 60px;
+}
+
+.simg {
+  display: grid;
+}
+
+.img-more,
+.info-more {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.img-more {
+  width: fit-content;
+}
+
+.info-more {
+  color: white;
+  padding-top: 9rem;
+  padding-bottom: 0px;
+  opacity: 0;
+  background: #00000080;
+  transition: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.info-more:hover {
+  opacity: 1;
 }
 
 /* Remove border from toggler */
