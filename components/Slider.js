@@ -12,7 +12,7 @@ export default function Slider() {
     <>
       <div
         id="main-carousel"
-        className="carousel slide my-3"
+        className="carousel slide d-none d-md-block"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
@@ -41,7 +41,12 @@ export default function Slider() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="simg">
-              <img className="img-more w-100" src={img1} alt="" height={400} />
+              <img
+                className="rounded img-more w-100"
+                src={img1}
+                alt=""
+                height={450}
+              />
               <div className="info-more text-center">
                 <h2>This is hidden</h2>
                 <p>
@@ -52,7 +57,12 @@ export default function Slider() {
           </div>
           <div className="carousel-item">
             <div className="simg">
-              <img className="img-more w-100" src={img2} alt="" height={400} />
+              <img
+                className="rounded img-more w-100"
+                src={img2}
+                alt=""
+                height={450}
+              />
               <div className="info-more text-center">
                 <h2>This is hidden</h2>
                 <p>
@@ -63,7 +73,12 @@ export default function Slider() {
           </div>
           <div className="carousel-item ">
             <div className="simg">
-              <img className="img-more w-100" src={img3} alt="" height={400} />
+              <img
+                className="rounded img-more w-100"
+                src={img3}
+                alt=""
+                height={450}
+              />
               <div className="info-more text-center">
                 <h2>This is hidden</h2>
                 <p>

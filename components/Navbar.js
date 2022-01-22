@@ -26,7 +26,7 @@ export default function Navbar() {
         <Link href={`/`}>
           <a className="navbar-brand">
             <span className="text-primary fw-bolder h2">
-              <i class="bi bi-palette-fill m-3 h4"></i>
+              <i className="bi bi-palette-fill m-3 h4"></i>
               Star Painting
             </span>
           </a>
@@ -45,7 +45,7 @@ export default function Navbar() {
           <span className="toggler-icon bottom-bar"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-end align-center"
+          className="collapse navbar-collapse justify-content-end "
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav">
@@ -53,7 +53,6 @@ export default function Navbar() {
               <Link href={`/about`}>
                 <a className="nav-link text-dark">About Us</a>
               </Link>
-              <div classNameName="under"></div>
             </li>
 
             <li className="nav-item">
